@@ -37,7 +37,7 @@ void counting_sort(int *arr, size_t size)
 	sorted = malloc(sizeof(int) * size);
 	if (sorted == NULL)
 		return;
-	max = get_max(arr, size);
+	max = gat_max(arr, size);
 	count = malloc(sizeof(int) * (max + 1));
 	if ( count == NULL)
 	{
