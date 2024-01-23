@@ -16,12 +16,12 @@ void swap_ints(int *a, int *b)
 
 /**
  * shell_sort - Sort an array of integers order using the shell sort algorithm.
- * @arr: An array of integers.
+ * @array: An array of integers.
  * @size: The size of array.
  *
  * Description: Uses the knuth interval sequence.
  */
-void shell_sort(int *arr, size_t size)
+void shell_sort(int *array, size_t size)
 {
 	size_t gap, i, j;
 
@@ -35,12 +35,12 @@ void shell_sort(int *arr, size_t size)
 		for (i = gap; i < size; i++)
 		{
 			j = i;
-			while (j >= gap && arr[j - gap] > arr[j])
+			while (j >= gap && array[j - gap] > array[j])
 			{
-				swap_ints(arr + j, arr + (j - gap));
+				swap_ints(array + j, array + (j - gap));
 				j -= gap;
 			}
 		}
-		print_arr(arr, size)
+		print_array(array, size)
 	}
 }
